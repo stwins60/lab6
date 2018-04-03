@@ -28,30 +28,19 @@
 </head>
 <body>
   <h1 class="center">ITMD-361 - Lab 7 - Basic JavaScript Event Handling and DOM</h1>
-  <h2 class="center">Name: <input id = "entryName" type = "text" name =
-    "nameEntry" placeholder="Enter your name"></h2>
-  <h3 class="center">Email: <input id="entryEmail" type="text" name="emailEntry"
-  placeholder="Enter your email address"></h3>
+  <h2 class="center">Idris Fagbemi</h2>
+  <h3 class="center">ifagbemi@hawk.iit.edu</h3>
   <div id="container">
     <input id="entryinput" type="text" name="textEntry" placeholder="Enter a Message">
-    <!-- <div id="entrybutton">Alert Me</div> -->
-    <div class="center" ><input type=button value="Alert Me" id="entrybutton"
-      onclick="displayalert()"></div>
-
-    <h2 class="center">Results: <input type="text" id="textoutput" placeholder=
-      "Show results here"></h2>
-  </div>
-  <script>
-  function displayalert() {
-
-    $printname= document.getElementById("entryName").value;
-
-    $printvalue= document.getElementById("entryinput").value;
-
-    alert($printname + ':' + $printvalue);
-    document.getElementById("textoutput").value = $printvalue;
-
-  }
-  </script>
+    <div id="entrybutton">Alert Me</div>
+		<h2 id="textoutput" class="center">Show results here</h2>
+	</div>
+	<script>
+	    document.getElementById("entrybutton").addEventListener("click",function(){
+		var txt = document.getElementById("entryinput").value;
+		alert("Idris Fagbemi: "+txt);
+		document.getElementById("textoutput").innerHTML=txt;
+		})
+	</script>
 </body>
 </html>
